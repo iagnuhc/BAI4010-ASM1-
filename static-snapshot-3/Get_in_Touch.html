@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <style>
+        /* This only affects the table on the portfolio page */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Requirement: Tables area */
+            border: 2px solid #B71234; /* Requirement: Borders area */
+        }
+    </style>
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Get In Touch</h1>
+    </header>
+
+     <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="portfolio.html">Experience & Projects</a>
+        <div class="dropdown">
+            <button class="dropbtn">More 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="contact.html" > Get in Touch</a>
+              <a href="https://www.linkedin.com/in/chun-ngai-chan-904361237/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</div>
+            </div>
+        </div> 
+    </nav>
+
+    <div class="container">
+        <section class="card">
+            <h2>Let's Connect</h2>
+            <p>I am open to discussing research roles (MPhil, RA) or collaborative projects in sport data science.</p>
+
+            <form id="contactForm">
+                
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+                <li><label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email.." required></li>
+                <li><label for="subject">Briefly introduce why you want to contact me</label></li>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px" required></textarea>
+                <input type="submit" value="Send Message">
+                
+
+                
+            </form>
+
+            <div id="success-msg" style="display:none; color: green; margin-top: 15px; padding: 10px; border: 1px solid green; background: #eaffea;">
+                <strong>Success!</strong> Thank you for reaching out. I will get back to you shortly.
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; Chan Chun Ngai</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Stop page reload
+            
+            // Show the inline message
+            var msg = document.getElementById('success-msg');
+            msg.style.display = 'block';
+            
+            // Optional: clear the form
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+
+</body>
+</html>
